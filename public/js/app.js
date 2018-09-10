@@ -57,14 +57,6 @@ const appClient = (function appClient() {
     }
   };
 
-  const refresh = function refresh() {
-    document.location.reload(true);
-  };
-
-  const simulClick = function simulClick () {
-    gerProd.click();
-  };
-
   const createProd = function createProd(e) { //déclenchée par submit FORM
     doAjax(url + "/api/v1/produit", "POST", res => {
       console.log(JSON.parse(res)); // faire quelque chose ici si erreur : )
