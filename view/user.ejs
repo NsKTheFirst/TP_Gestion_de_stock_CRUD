@@ -1,0 +1,63 @@
+<%- include partial/head.ejs %>
+
+<section id="user">
+  <h1 class="title">Manage Users</h1>
+  <h3 class="title">TP front</h3>
+  <p>
+    Coder un module de type tableur pour lister les users ( @view/partial/ ).<br>
+    Conseil: préférer l'élément HTML table, bien adapté à cette tâche.<br>
+    Ajouter des filtres pour trier les lignes (ex: par id, par nom...).<br>
+    Indices: (re)voir la fonction Array.filter, Array.sort et les méthodes de manipulation du DOM.<br>
+  </p>
+  <hr>
+  <h2 class="title">( === <b><%= title %></b> ))</h2>
+  <table id ="tableUser">
+    <thead>
+      <tr>
+        <th id = "thId">Id</th>
+        <th id = "thName">Name</th>
+        <th id = "thLn">Lastname</th>
+        <th id = "thAge">Age</th>
+        <th id = "thMail">Email</th>
+        <th id = "thPays">Pays</th>
+        <th>Modifier</th>
+      </tr>
+    </thead>
+    <tbody id = "tbody">
+       <% for(var user of users) {
+       %>
+          <tr id = <%= user.id %>>
+            <td class= "tdId"><%= user.id %></td>
+            <td class= "tdName" contenteditable = "true"><%= user.name %></td>
+            <td class= "tdLn" contenteditable = "true"><%= user.lastname %></td>
+            <td class="tdAge" contenteditable = "true"><%= user.age || "non renseigné" %></td>
+            <td class= "tdMail" contenteditable = "true"><%= user.email %></td>
+            <% for(var country of countries) {%>
+            <% if(user.id_country === country.id) { %>
+            <td class= "tdCountry"><%= country.nom_fr_fr %></td>
+            <% } %>
+            <% } %>
+            <td><button id="btn">Modifier</button></td>
+          </tr>
+    <% } %>
+    </tbody>
+  </table>
+ 
+  <hr>
+  <h3 class="title">TP back</h3>
+  <p>
+    A / On souhaite connaître l'âge de nos users.<br>
+    Prendre le code de <b>@js/block_05/03_mysql_connect</b> pour exemple.<br>
+    Modifier le form de la vue HTML, la table de bdd, les fonctions du modèle (@model/user.js).
+  </p>
+  <p>
+    B / On souhaite connaître le pays de nos users.<br>
+    Ajouter les éléments de vue, d'api et de modèle pour pouvoir associer l'id d'un pays à un user.
+  <p>
+    C / Ajouter une colonne "modifier" au tableur user (view).<br>
+    Chaque ligne user dispose maintenant d'un bouton ou une icône.<br>
+    Au click, afficher toutes les informations d'un utilisateur sur une page dediée.<br>
+  </p>
+</section>
+
+<%- include partial/footer.ejs %>

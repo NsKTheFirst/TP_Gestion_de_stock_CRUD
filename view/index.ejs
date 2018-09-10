@@ -1,0 +1,80 @@
+<%- include partial/head.ejs %>
+
+<h1 id="biz">BizOnline</h1>
+
+<h2 id="sstitre">Gérer le stock</h2>
+
+<div class="bouton">
+  <h3 id="gerProd" class="btn">Gérer les produits</h3>
+  <h3 id="gerBrand" class="btn">Gérer les marques</h3>
+</div>
+
+<section id="produits" class="secProd inactive">
+  <table class="container" id="tabProd">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Marque</th>
+        <th>Nom</th>
+        <th>Prix</th>
+        <th>Description</th>
+        <th>Modifier</th>
+        <th>Supprimer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(var produit of produits) { %>
+      <tr id= <%= produit.id %>>
+        <td><%= produit.id %></td>
+        <td><%= produit.id_marque %></td>
+        <td><%= produit.nom %></td>
+        <td><%= produit.prix %></td>
+        <td><%= produit.description %></td>
+        <td><i id="modif_<%= produit.id %>" class="fas fa-pen editBtn"></i></td>
+        <td><i id="suppr_<%= produit.id %>" class="fas fa-trash-alt delBtn"></i></td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+
+  <form action="" class="formulaire">
+    <input type="text" class="champ" placeholder="Marque" id="brandName">
+    <input type="text" class="champ" placeholder="Nom" id="prodName">
+    <input type="text" class="champ" placeholder="Prix" id ="prodPrix">
+    <textarea id="description" name="description" rows="3" cols="40" maxlength= "250" placeholder="Description: 250 caractères max"></textarea>
+  </form>
+  <div class="commandes">
+    <h3 class="create" id="newProd">Ajouter nouveau produit</h3>
+  </div>
+</section>
+
+<section id="marques" class="secMar inactive">
+  <table class="container" id="tabBrand">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Modifier</th>
+        <th>Supprimer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(var marque of marques) { %>
+      <tr id= <%= marque.id %>>
+        <td><%= marque.id %></td>
+        <td><%= marque.name %></td>
+        <td><i id="modif2_<%= marque.id %>" class="fas fa-pen editBtn2"></i></td>
+        <td><i id="suppr2_<%= marque.id %>" class="fas fa-trash-alt delBtn2"></i></td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+  <form action="" class="formulaire">
+    <input type="text" class="champ" placeholder="Marque" id="nomBrand">
+  </form>
+  <div class="commandes">
+    <h3 class="create" id="newBrand">Ajouter nouvelle marque</h3>
+  </div>
+</section>
+
+<%- include partial/footer.ejs %>

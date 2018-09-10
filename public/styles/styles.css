@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #384d77;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#biz {
+  text-align: center;
+  font-size: 50px;
+  background: #102756;
+  color: white;
+  padding: 15px;
+  font-weight: : 800;
+}
+
+#sstitre {
+  padding: 30px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-weight: 700
+}
+
+.bouton {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.btn {
+  cursor: pointer;
+  width: 20%;
+  border: 1px solid #b4b7ba;
+  text-align: center;
+  padding: 15px;
+  line-height: 40px;
+  border-radius: 20px;
+  background: linear-gradient(#9ac9ed, #156eb2);
+  text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+  box-shadow: 0 0 5px rgba( 0, 0, 0, 0.5), 0 -1px 0 rgba( 255, 255, 255, 0.4);
+  user-select: none
+}
+
+.btn:hover{
+  color: #222;
+  background: linear-gradient( #9fd2f9, #1e9dff);
+}
+
+.btn:active{
+     color: #000;
+     background: #444;
+     background: linear-gradient(#9ac9ed, #156eb2);
+     box-shadow: 1px 1px 10px black inset, 
+                 0 1px 0 rgba( 255, 255, 255, 0.4);
+}
+
+.container td {
+      font-weight: normal;
+      font-size: 1em;
+  -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+       -moz-box-shadow: 0 2px 2px -2px #0E1119;
+            box-shadow: 0 2px 2px -2px #0E1119;
+}
+
+.container {
+  
+  overflow: hidden;
+  width: 90%;
+  margin: 50px auto ;
+  display: table;
+}
+
+.container td{
+
+  line-height: 35px;
+  text-align: center;
+}
+
+.container tr:nth-child(odd) {
+      background-color: #323C50;
+}
+
+.container tr:nth-child(even) {
+      background-color: #2C3446;
+}
+
+.container th {
+  line-height: 35px;
+  text-align: center;
+  background-color: #1F2739;
+  font-weight: bold;
+  font-size: 1em;
+  color: #185875;
+}
+
+.container td:first-child { color: #FB667A; }
+
+.container tr:hover {
+   background-color: yellow;
+-webkit-box-shadow: 0 6px 6px -6px #0E1119;
+       -moz-box-shadow: 0 6px 6px -6px #0E1119;
+            box-shadow: 0 6px 6px -6px #0E1119;
+}
+
+.container td:hover {
+  background-color: #FFF842;
+  color: #403E10;
+  font-weight: bold;
+  
+  box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+  
+  transition-delay: 0s;
+      transition-duration: 0.4s;
+      transition-property: all;
+  transition-timing-function: line;
+}
+
+.formulaire {
+  width: 90%;
+  border: 1px solid #b4b7ba;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.commandes {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.create {
+  cursor: pointer;
+  width: 20%;
+  border: 1px solid #b4b7ba;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+  background: linear-gradient(#9ac9ed, #156eb2);
+  text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+  box-shadow: 0 0 5px rgba( 0, 0, 0, 0.5), 0 -1px 0 rgba( 255, 255, 255, 0.4);
+  user-select: none
+}
+
+.create:hover{
+  color: #222;
+  background: linear-gradient( #9fd2f9, #1e9dff);
+}
+
+.create:active{
+     color: #000;
+     background: #444;
+     background: linear-gradient(#9ac9ed, #156eb2);
+     box-shadow: 1px 1px 10px black inset, 
+                 0 1px 0 rgba( 255, 255, 255, 0.4);
+}
+
+i {
+  color: #156eb2;
+  cursor: pointer;
+}
+
+i:hover {
+  color: #9ac9ed;
+}
+
+
+.modif {
+  cursor: pointer;
+  width: 20%;
+  border: 1px solid #b4b7ba;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+  background: linear-gradient(#9ac9ed, #156eb2);
+  text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+  box-shadow: 0 0 5px rgba( 0, 0, 0, 0.5), 0 -1px 0 rgba( 255, 255, 255, 0.4);
+  user-select: none 
+}
+
+.modif:hover{
+  color: #222;
+  background: linear-gradient( #9fd2f9, #1e9dff);
+}
+
+.modif:active{
+     color: #000;
+     background: #444;
+     background: linear-gradient(#9ac9ed, #156eb2);
+     box-shadow: 1px 1px 10px black inset, 
+                 0 1px 0 rgba( 255, 255, 255, 0.4);
+}
+
+
+.champ {
+  width: 15%;
+  padding: 5px;
+  border-radius: 8px;
+  background: #9ac9ed;
+  color: white;;
+}
+
+#description {
+  padding: 5px;
+  border-radius: 8px;
+  background: #9ac9ed;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  color: white;
+}
+
+.inactive {
+  display: none;
+}
+
+@media (max-width: 800px) {
+.container td:nth-child(4),
+.container th:nth-child(4) { display: none; }
+}
